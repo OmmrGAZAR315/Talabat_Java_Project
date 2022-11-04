@@ -30,7 +30,7 @@ abstract public class MainMenu implements OwnerFunctions, CustomerFunctions {
     static int CustomerAddress;//never changed until running loginPage again
 
 
-    public static void firstScreen() throws InterruptedException {
+    public static void firstScreen()  {
         do {
             reExecute = false;
             System.out.println("--------------Welcome to Talabat-----------------");
@@ -54,4 +54,27 @@ abstract public class MainMenu implements OwnerFunctions, CustomerFunctions {
             }
         } while (reExecute);
     }
+    void  spacer(){
+        for(int x=0; x<20;x++) {
+            System.out.println();
+        }
+    }
+    public static void  loading() throws InterruptedException {
+        Thread.sleep(500);
+        System.out.println("-------------------Talabat-------------------");
+        Thread.sleep(1000);
+        System.out.println("          Talabat Kol youm fel engaz");
+        Thread.sleep(1500);
+        System.out.print("Loading");
+        Thread.sleep(1700);
+        System.out.print(".");
+        Thread.sleep(1000);
+        System.out.print(".");
+        Thread.sleep(1000);
+        System.out.print(".");
+        Thread.sleep(500);
+        System.out.print(".");
+        Thread.sleep(500);
+    }
+
 }
